@@ -1,0 +1,14 @@
+{
+  "name": "serverlessfundoo",
+  "version": "1.0.0",
+  "description": "Create serverless backend running on AWS",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shweta Bochare",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.0"
+  }
+}
