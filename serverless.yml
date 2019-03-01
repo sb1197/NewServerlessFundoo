@@ -82,7 +82,7 @@ functions:
     handler: handler.verifyEmail
     events:
       - http:
-          path: 'users/verifyEmail'
+          path: users/verifyEmail
           method: post
           cors: true 
   resetPassword:

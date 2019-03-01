@@ -34,6 +34,10 @@ module.exports.register = async (event) => {
   // console.log("Email : ",response.Item.userEmail);
   var response = {
     statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
     body: JSON.stringify({ 'msg': 'success' }),
   };
   var payload = {
@@ -138,10 +142,10 @@ module.exports.resetPassword = async (event) => {
   var result = await model.verifyUserToken(event.queryStringParameters.id);
   console.log("logged in user for reset password: ", JSON.stringify(result));
   var parseParam = JSON.parse(event.body);
-  userPassword = parseParam.userPassword;
+  // userPassword = parseParam.userPassword;
   var req = {
-    "userPassword": userPassword,
-    "result": result
+    userPassword : parseParam.userPassword,
+    result : result
   }
   var resultNewPassword = await model.updatePassword(req);
   console.log("new password in result body : ", resultNewPassword);
