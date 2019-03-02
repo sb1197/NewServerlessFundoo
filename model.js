@@ -1,6 +1,3 @@
-// const bcrypt = require('bcrypt');       //Requiring Bcrypt to create hash of the user password stored in database 
-// let saltRounds = 10;
-
 var AWS = require("aws-sdk");
 var dynamodb = new AWS.DynamoDB({ region: "us-west-2", apiVersion: "2012-08-10" });
 var utility = require('./utility/utility');

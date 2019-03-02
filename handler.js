@@ -31,7 +31,7 @@ module.exports.register = async (event) => {
   console.log("User Registered :" + JSON.stringify(registerResult));
   // response.body = JSON.stringify(result);
   //  console.log("Response:" + JSON.stringify(res));
-  // console.log("Email : ",response.Item.userEmail);
+  console.log("Email : ",response.Item.userEmail);
   var response = {
     statusCode: 200,
     headers: {
